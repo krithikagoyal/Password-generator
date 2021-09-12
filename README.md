@@ -1,5 +1,6 @@
 # Password-generator
 A command line application for generating password.
+<p align="center"><img src="https://github.com/krithikagoyal/Password-generator/blob/master/images/image1.bmp?raw=true"></p>
 
 # Running the app
 Fork the repository and inside the forked folder, run the following commands
