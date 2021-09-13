@@ -2,6 +2,7 @@
 const commander = require('commander')
 const chalk = require('chalk')
 const clipboardy = require('clipboardy')
+const savePassword = require('./savePassword')
 
 commander.version('1.0.0').description('A password generator')
 
@@ -16,7 +17,7 @@ const { length, save, numbers, symbols } = commander.opts();
 
 let alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let num = '1234567890';
-let symbol = '!@#$%^&*()_+-?';
+let symbol = '!@#$^&*_+-?';
 
 if (numbers) {
     alpha += num;
@@ -35,3 +36,7 @@ clipboardy.writeSync(password)
 
 console.log(chalk.blue('Generated Password:'), chalk.yellow(password))
 console.log(chalk.green('Password copied to clipboard!'))
+
+if (save) {
+    savePassword(password)
+}
